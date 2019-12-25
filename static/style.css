@@ -1,0 +1,71 @@
+
+html,body {
+  padding:0px;
+  margin:0px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  background: #222;
+  color: #aaa;
+  position:relative;
+}
+
+h1,h2 {
+  font-weight: 200;
+  margin: 0.4em 0;
+  text-align: center;
+}
+h1 { font-size: 3.5em; }
+h2 {
+  color: #888;
+  font-size: 2em;
+}
+
+.navbar-light .navbar-nav .nav-link{
+	color:white !important; 
+}
+
+.navbar-light .navbar-brand{
+	color:white !important;
+}
+#main-menu{
+  z-index:999 !important;
+}
+
+#home{
+	/*background:"{{url_for('static', filename='robo.png') }}"*/
+	width:100%;
+	height:auto; 
+  position:absolute;
+
+}
+
+.about-me{
+	background-color: #121212;
+	width: 100%;
+    position:absolute;
+  z-index:9999;
+}
+
+
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  /*position: absolute;*/
+  width: 100%;
+  height: auto;
+  background-color: black;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.card{
+  background-color:#121212 !important;
+}

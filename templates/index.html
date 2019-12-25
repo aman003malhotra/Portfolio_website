@@ -1,0 +1,459 @@
+{% extends "layout.html" %}
+{% block content %}
+	<link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" id="themify-icons-css-css" href="http://themes.dhrubok.website/porfo/wp-content/themes/porfo/assets/css/themify-icons.css?ver=5.0.8" type="text/css" media="all">
+<div id="particles-js">
+	<div class="text-center mb-5 main-heading float-left" style="margin-top:600px;padding-left:250px; " id="home">
+				<h1>Hi I am 
+				  <span
+				     class="txt-rotate"
+				     data-period="2000"
+				     data-rotate='[ " a Python Coder.", " a Web Developer.", " an Electronics Enthusiast!"]'></span>
+				</h1>
+				<h2>My Name is &lt;Aman Malhotra &gt;
+					<a role="button" class="btn btn-lg btn-outline-danger" href="#about">Learn More
+						<i class="fas fa-arrow-circle-right ml-2"></i>
+					</a>
+				</h2>
+				<ul class="list-unstyled text-center list-inline mt-5">
+					<li class="list-inline-item"><span class="fab fa-instagram fa-2x mr-2"></span></li>
+					<li class="list-inline-item"><span class="fab fa-facebook-f fa-2x mr-2"></span></li>
+					<li class="list-inline-item"><span class="fab fa-youtube mr-2 fa-2x"></span></li>
+					<li class="list-inline-item"><span class="fab fa-twitter mr-2 fa-2x"></span></li>
+					<li class="list-inline-item"><span class='fab fa-linkedin-in mr-2 fa-2x'></span></li>
+				</ul>
+			</div>
+			<div>
+				<img class="img-fluid" src="{{url_for('static', filename='robot.png') }}" style="position:absolute;">
+			</div>
+</div>
+<div class="about-me" id="about">
+	<div class="container mt-5">
+		<div class="row">
+			<div class="col-md-5">
+				<div class="text-left-about">
+					<img class="img-fluid img-thumbnail" style="width:320px; height:500px;" src="{{ url_for('static', filename='aman.jpg')}}">
+				</div>
+			</div>
+			<div class="col-md-7">
+				<div class="text-right-about">
+					<h1 class="text-center">About Me</h1>
+					<p class="lead">
+						Hi, I am currently first year CSE student studying in Guru Nanak Dev Engineering College, Ludhiana. I currently work in python and it's web framework flask and make projects as a backend Developer.I am a front end developer and know the scripting language html and also Cascading Style Sheet(CSS) and Bootstrap and javascript. I am an electonics  enthusiast and I play with arduino and the sensors and IOT stuff.Want to work with me contact me through the social media handles or through email.
+					</p>
+				</div>
+				<a href="" role="button" class="btn btn-danger btn-lg">Hire Me</a>
+			</div>
+		</div>
+</div>
+<div style="background-color:black;" id="resume">
+	<div class="pb-5 px-5">
+		<h1 class="pt-5">My Skills</h1>
+			<div class="card-deck text-justify">
+				<div class="card mr-4 border-danger bg-dark">
+					<div class="card-body">
+						<h2 class="card-title text-danger"><i class="fab fa-html5 fa-2x"></i><br>Front End Developer</h2>
+						<p class="lead card-text">I Work in Frontend Development of the Websites.I Know the Scripting laguages HTML,CSS(Cascading Style Sheet), Javascript That are mainly used for designing beautiful websites </p>
+					</div>
+				</div>
+				<div class="card mr-4 bg-dark border border-danger">
+					<div class='card-body'>
+						<h2 class="card-title text-danger"><i class="fab fa-python fa-2x"></i><br>Back End Developer</h2>
+						<p class="lead  card-text">I know decent amount of python and one of it's web framework Flask Which has helped me in dsigning this website and some sample projects also.</p>
+					</div>
+				</div>
+				<div class="card mr-4 border-danger bg-dark">
+					<div class="card-body">
+						<h2 class="card-title text-danger">
+							<i class="fas fa-users fa-2x"></i><br>Motivational Speaker</h2>
+						<p class="card-text lead">
+							I am an avid reader and read alot of books related to entrepreneurship and business that works as a source of elixir of information for me.I love sharing those lessons with my peers and motivating them. 
+						</p>
+					</div>
+				</div>
+				<div class="card border-danger bg-dark">
+					<div class="card-body">
+						<h2 class="card-title text-danger">
+							<i class="fas fa-robot fa-2x"></i><br>Electronics Enthusiast</h2>
+						<p class="lead card-text">
+							I have worked in Arduino and 8051 Chip for basic level robots like line following robot and am currently working on a Drone and also in IOT (Internet of Things) like controlling switches wirelessly and voice controlled switches and mobile controlled car.
+						</p>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
+
+<div style="background-color:#121212" id="contact">
+	<div class="container pt-3 text-center">
+		<h1>Wanna Start Working with me</h1>
+		<p class="lead ">Send me you project briefs or ping me on a social media platform</p>
+		<a href="" role="button" class="btn btn-outline-danger btn-lg">Start a Project<i class="fas fa-arrow-circle-right ml-2"></i></a>
+		<div class="row">
+			<div class="col-sm-4 text-danger">
+				<i class="fas fa-mobile-alt fa-3x pt-5"></i><br>
+				<p class="lead pt-3">+91 6284085887</p>
+
+			</div>
+			<div class="col-sm-4 text-danger">
+				<i class="fas fa-map-marker-alt fa-3x pt-5"></i><br>
+				<p class="lead pt-3">Ludhiana,Punjab</p>
+				
+			</div>
+			<div class="col-sm-4 text-danger">
+				<i class="far fa-envelope fa-3x pt-5"></i><br>
+				<p class="lead pt-3">aman003malhotra@gmail.com</p>
+			</div>
+		</div>
+		<div class="container text-center">
+			{% with messages = get_flashed_messages(with_categories=true) %}
+				{% if messages %}
+					{% for category, message in messages %}
+					<div class="alert alert-{{ category }}">
+						{{ message }}
+					</p>
+					{% endfor %}
+				{% endif %}
+			{% endwith %}	
+		</div>	
+		<form class="pt-5" method="POST" action="{{ url_for('index') }}">
+			<div class="row">
+				<div class='col-sm'>
+					<div class="form-group">
+						<input type="text" name="name" class="form-control form-control-lg bg-dark border-danger text-light" placeholder="Enter Name">
+					</div>
+					<div class="form-group">
+						<input type="email" name="email" class="form-control form-control-lg bg-dark border-danger text-light" placeholder="Enter Your Email">
+					</div>
+				</div>
+				<div class="col-sm">
+					<div class="form-group">
+		                <textarea class="form-control form-control-lg bg-dark border-danger text-light" id="message" rows="3" placeholder="Description of the Project" name="message"></textarea>
+		            </div>
+		        </div> 
+		    </div> 
+	        <button class="btn btn-danger btn-block" type="submit">Send Message</button>  	
+	        <svg style="padding-top:150px;"height="200" width="100%">
+  				<line x1="0" y1="0" x2="1500" y2="0" style="stroke:#888;stroke-width:2" />
+			</svg> 
+			<h2>Copyright2019</h2>
+		</form>
+	</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--THIS IS FOR INTRODUCTION-->
+    <script>
+    	var TxtRotate = function(el, toRotate, period) {
+		  this.toRotate = toRotate;
+		  this.el = el;
+		  this.loopNum = 0;
+		  this.period = parseInt(period, 4) || 2000;
+		  this.txt = '';
+		  this.tick();
+		  this.isDeleting = false;
+		};
+
+		TxtRotate.prototype.tick = function() {
+		  var i = this.loopNum % this.toRotate.length;
+		  var fullTxt = this.toRotate[i];
+
+		  if (this.isDeleting) {
+		    this.txt = fullTxt.substring(0, this.txt.length - 1);
+		  } else {
+		    this.txt = fullTxt.substring(0, this.txt.length + 1);
+		  }
+
+		  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+		  var that = this;
+		  var delta = 300 - Math.random() * 100;
+
+		  if (this.isDeleting) { delta /= 2; }
+
+		  if (!this.isDeleting && this.txt === fullTxt) {
+		    delta = this.period;
+		    this.isDeleting = true;
+		  } else if (this.isDeleting && this.txt === '') {
+		    this.isDeleting = false;
+		    this.loopNum++;
+		    delta = 500;
+		  }
+
+		  setTimeout(function() {
+		    that.tick();
+		  }, delta);
+		};
+
+		window.onload = function() {
+		  var elements = document.getElementsByClassName('txt-rotate');
+		  for (var i=0; i<elements.length; i++) {
+		    var toRotate = elements[i].getAttribute('data-rotate');
+		    var period = elements[i].getAttribute('data-period');
+		    if (toRotate) {
+		      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+		    }
+		  }
+		  // INJECT CSS
+		  var css = document.createElement("style");
+		  css.type = "text/css";
+		  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+		  document.body.appendChild(css);
+		};
+    </script>
+
+
+<!--THIS IS FOR PARTICLE WALLPAPER-->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script>
+
+	/* ---- particles.js config ---- */
+
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 100,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+
+
+/* ---- stats.js config ---- */
+
+var count_particles, stats, update;
+stats = new Stats;
+stats.setMode(0);
+stats.domElement.style.position = 'absolute';
+stats.domElement.style.left = '0px';
+stats.domElement.style.top = '0px';
+document.body.appendChild(stats.domElement);
+count_particles = document.querySelector('.js-count-particles');
+update = function() {
+  stats.begin();
+  stats.end();
+  if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+    count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+  }
+  requestAnimationFrame(update);
+};
+requestAnimationFrame(update);
+</script>
+
+<!--THIS IS FOR SCROLL REVEAL-->
+<script>
+	window.sr = ScrollReveal();
+	sr.reveal('.text-right-about', {
+		duration: 2000,
+		origin:'right'
+	})
+
+	sr.reveal('.text-left-about',{
+		duration:2000,
+		origin:'left'
+	})
+	sr.reveal('.card-1',{
+		duration:2000,
+		origin:'left'
+	})
+	sr.reveal('.card-2',{
+		duration:2000,
+		origin:'left'
+	})
+	sr.reveal('.card-3',{
+		duration:2000,
+		origin:'left'
+	})
+	sr.reveal('.card-4',{
+		duration:2000,
+		origin:'left'
+	})
+	sr.reveal('.card-4',{
+		duration:2000,
+		origin:'left'
+	})
+</script>
+
+	<!--This is for scrollspy-->
+
+<script>
+	    $('body').scrollspy({ target: '.main-menu' });
+
+    // Add smooth scrolling
+    $('.main-menu a').on('click', function (e) {
+      // Check for a hash value
+      if (this.hash !== '') {
+        // Prevent default behavior
+        e.preventDefault();
+
+        // Store hash
+        const hash = this.hash;
+
+        // Animate smooth scroll
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 900, function () {
+          // Add hash to URL after scroll
+          window.location.hash = hash;
+        });
+      }
+    });
+</script>
+{% endblock %}
