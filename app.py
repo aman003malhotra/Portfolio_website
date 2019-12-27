@@ -3,11 +3,10 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, TextAreaField
 from wtforms.validators import DataRequired
 from database import get_db, connect_db
-import os
-# import ScrollReveal from 'scrollre'
+
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.urandom(24)
+app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
 
 @app.route('/', methods=['GET','POST'])
 def index():

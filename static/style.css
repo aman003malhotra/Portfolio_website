@@ -28,7 +28,7 @@ h2 {
 	color:white !important;
 }
 #main-menu{
-  z-index:999 !important;
+  z-index:17000 !important;
 }
 
 #home{
@@ -37,6 +37,14 @@ h2 {
 	height:auto; 
   position:absolute;
 
+}
+.main-heading{
+  margin-top:300px;
+  padding-left:400px; 
+}
+
+#navbar ul li a:hover{
+  text-decoration: line-through;
 }
 
 .about-me{
@@ -68,4 +76,48 @@ canvas {
 
 .card{
   background-color:#121212 !important;
+}
+
+.social-media li a{ 
+  text-decoration:none !important;
+  color:white;
+}
+
+@media only screen and (max-width: 1500px) {
+  .main-menu{
+    background-color: black;
+  }
+  .robot{
+    display: none;
+  }
+  .main-heading{
+    width:100%;
+    text-align:center;
+    margin-top:70px;
+    padding-left: 0px;
+    z-index:10000;
+  }
+  .main-heading h1{
+    font-size:2em;
+  }
+
+  .main-heading h2{
+    font-size:1em;
+  }
+}
+
+@media only screen and (min-width:800px) (max-width: 1500px;){
+  .main-heading{
+    margin-top:200px;
+  }
+}
+
+@media only screen and (max-width:768px){
+  .main-heading{
+    padding-top:200px !important;
+  }
+
+  #particles-js{
+    height:700px;
+  }
 }

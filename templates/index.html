@@ -3,7 +3,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" id="themify-icons-css-css" href="http://themes.dhrubok.website/porfo/wp-content/themes/porfo/assets/css/themify-icons.css?ver=5.0.8" type="text/css" media="all">
 <div id="particles-js">
-	<div class="text-center mb-5 main-heading float-left" style="margin-top:600px;padding-left:250px; " id="home">
+	<div class="text-center mb-5 main-heading float-left" id="home">
 				<h1>Hi I am 
 				  <span
 				     class="txt-rotate"
@@ -15,16 +15,16 @@
 						<i class="fas fa-arrow-circle-right ml-2"></i>
 					</a>
 				</h2>
-				<ul class="list-unstyled text-center list-inline mt-5">
-					<li class="list-inline-item"><span class="fab fa-instagram fa-2x mr-2"></span></li>
-					<li class="list-inline-item"><span class="fab fa-facebook-f fa-2x mr-2"></span></li>
-					<li class="list-inline-item"><span class="fab fa-youtube mr-2 fa-2x"></span></li>
-					<li class="list-inline-item"><span class="fab fa-twitter mr-2 fa-2x"></span></li>
-					<li class="list-inline-item"><span class='fab fa-linkedin-in mr-2 fa-2x'></span></li>
+				<ul class="list-unstyled text-center list-inline mt-5 social-media">
+					<li class="list-inline-item"><a href=""><span class="fab fa-instagram fa-2x mr-2"></span></a></li>
+					<li class="list-inline-item"><a href=""><span class="fab fa-facebook-f fa-2x mr-2"></span></a></li>
+					<li class="list-inline-item"><a href=""><span class="fab fa-youtube mr-2 fa-2x"></span></a></li>
+					<li class="list-inline-item"><a href=""><span class="fab fa-twitter mr-2 fa-2x"></span></a></li>
+					<li class="list-inline-item"><a href=""><span class='fab fa-linkedin-in mr-2 fa-2x'></span></a></li>
 				</ul>
 			</div>
 			<div>
-				<img class="img-fluid" src="{{url_for('static', filename='robot.png') }}" style="position:absolute;">
+				<img class="img-fluid robot" src="{{url_for('static', filename='robot.png') }}" style="position:absolute;">
 			</div>
 </div>
 <div class="about-me" id="about">
@@ -90,17 +90,17 @@
 		<p class="lead ">Send me you project briefs or ping me on a social media platform</p>
 		<a href="" role="button" class="btn btn-outline-danger btn-lg">Start a Project<i class="fas fa-arrow-circle-right ml-2"></i></a>
 		<div class="row">
-			<div class="col-sm-4 text-danger">
+			<div class="col-sm-4 text-danger contact-1">
 				<i class="fas fa-mobile-alt fa-3x pt-5"></i><br>
 				<p class="lead pt-3">+91 6284085887</p>
 
 			</div>
-			<div class="col-sm-4 text-danger">
+			<div class="col-sm-4 text-danger contact-2">
 				<i class="fas fa-map-marker-alt fa-3x pt-5"></i><br>
 				<p class="lead pt-3">Ludhiana,Punjab</p>
 				
 			</div>
-			<div class="col-sm-4 text-danger">
+			<div class="col-sm-4 text-danger contact-3">
 				<i class="far fa-envelope fa-3x pt-5"></i><br>
 				<p class="lead pt-3">aman003malhotra@gmail.com</p>
 			</div>
@@ -429,6 +429,18 @@ requestAnimationFrame(update);
 		duration:2000,
 		origin:'left'
 	})
+		sr.reveal('.contact-1',{
+		duration:2000,
+		origin:'left'
+	})
+		sr.reveal('.contact-2',{
+		duration:2000,
+		origin:'left'
+	})
+		sr.reveal('.contact-3',{
+		duration:2000,
+		origin:'left'
+	})		
 </script>
 
 	<!--This is for scrollspy-->
